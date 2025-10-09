@@ -2,8 +2,7 @@
 
 int main(){
 
-    inserir();
-    remover();
+    limpar
 
     return 0;
 }
