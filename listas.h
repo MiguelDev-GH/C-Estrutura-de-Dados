@@ -13,7 +13,14 @@
 
 #define limpar system(LIMPAR);
 
-void remover();
-void inserir();
+// -------------------------------------- //
+
+// Variáveis
+char op[10];
+
+// Funções
+void strLer();
+
+// -------------------------------------- //
 
 #endif
