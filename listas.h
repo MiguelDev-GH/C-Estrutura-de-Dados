@@ -16,7 +16,7 @@
 // -------------------------------------- //
 
 // Variáveis
-char op[10];
+char op[4];
 
 // Funções
 void strLer();
