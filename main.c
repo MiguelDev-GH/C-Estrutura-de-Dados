@@ -2,12 +2,23 @@
 
 int main(){
 
+    int rodando = 1;
+
     limpar
 
     do{
+        menu();
+
         printf("\n>>> ");
         strLer(op,sizeof op);
-    }while(strcmp(op,"sair"));
+        lowercase(op);
+
+        if(strcmp(op,"sair") == 0){
+            finalizarPrograma();
+        }
+        
+
+    }while(rodando);
 
     return 0;
 }
