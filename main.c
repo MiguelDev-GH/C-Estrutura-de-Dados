@@ -13,9 +13,26 @@ int main(){
         strLer(op,sizeof op);
         lowercase(op);
 
-        if(strcmp(op,"sair") == 0){
+        if(atoi(op) == 1){
+            opcao_criarLista();
+
+        } else if(atoi(op) == 2){
+            limpar
+            printf("Opção 2 salve");
+            confimar();
+
+        } else if(atoi(op) == 3){
+            limpar
+            printf("Opção 3 salve");
+            confimar();
+
+        } else if(strcmp(op,"sair") == 0){
             finalizarPrograma();
+        
+        } else{
+            opcaoInvalida();
         }
+
         
 
     }while(rodando);

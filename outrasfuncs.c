@@ -14,7 +14,7 @@ void strLer(char *string, size_t tam){
         strcpy(string,"erro");
     }
 
-    printf("\nSTRING: %s\nSizelen: %ld - Sizeof - %ld\n",string,strlen(string),tam);
+    //printf("\nSTRING: %s\nSizelen: %ld - Sizeof - %ld\n",string,strlen(string),tam);
 }
 
 // Menu e visual
