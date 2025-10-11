@@ -16,6 +16,14 @@
 
 // -------------------------------------- //
 
+//Structs
+typedef struct No{
+    int dado;
+    struct No *prox;
+}No;
+
+typedef struct No* Lista;
+
 // Variáveis
 char op[4];
 
@@ -26,6 +34,7 @@ void strLer();
 void confimar();
 
 void menu();
+
 void finalizarPrograma();
 void opcaoInvalida();
 

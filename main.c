@@ -33,8 +33,6 @@ int main(){
             opcaoInvalida();
         }
 
-        
-
     }while(rodando);
 
     return 0;

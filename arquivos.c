@@ -1,6 +1,4 @@
 // Lista dos arquivos
-
 #include "menu.c"
-#include "remover.c"
-#include "inserir.c"
+#include "ListaOp.c"
 #include "outrasfuncs.c"
