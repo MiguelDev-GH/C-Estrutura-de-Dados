@@ -5,7 +5,8 @@ void menu(){
     printf("=+-----LISTAS-----+=\n\n");
     printf("1- Criar \n");
     printf("2- Editar\n");
-    printf("3- Deletar\n\n");
+    printf("3- Deletar\n");
+    printf("4- Ver Listas\n\n");
     printf("SAIR para encerrar o programa\n");
 }
 
@@ -20,14 +21,17 @@ void opcao_criarLista(){
     limpar
     if((strcmp(op,"s") == 0 || strcmp(op,"sim") == 0) && ListaQntd < 10){
         
-        vetorListas[ListaQntd] = *criarLista();
+        vetorListas[ListaQntd] = criarLista();
 
-        if(vetorListas[ListaQntd] == NULL)
-            exit;
-        else
-            ListaQntd++;
-            printf("Lista %d criada com sucesso!",ListaQntd);
+        if(vetorListas[ListaQntd] == NULL){
+            printf("Erro na criação da lista");
             confimar();
+            return;
+        } else{
+            printf("Lista %d criada com sucesso!",ListaQntd);
+            ListaQntd++;
+            confimar();
+        }
 
     } else {
         printf("Operação cancelada");
@@ -44,6 +48,17 @@ void menuEditar(){
     printf("1- Inserir elemento em tal lista \n");
     printf("2- Remover elemento \n\n");
     printf("Outra opção ou enter para voltar\n");
+}
+
+void menuVerListas(){
+    limpar
+    printf("=+-----LISTAS----+=\n\n");
+    
+    for(int i = 0; i < ListaQntd; i++){
+        printf("Lista %d\n",i);
+    }
+
+    printf("\n");
 }
 
 void opcao_removerLista(){

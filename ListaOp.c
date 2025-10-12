@@ -2,19 +2,19 @@
 
 //Funções de inserir
 
-Lista* criarLista(){
+Lista criarLista(){
     void *li = malloc(sizeof(Lista));
     if(li == NULL)
-        exit;
+        exit(1);
     else
         return li;
 }
 
 void inserirInicio(Lista* li,int valor){
-    if(li == NULL) exit; 
+    if(li == NULL) exit(1); 
 
     No *novo = malloc(sizeof(No));
-    if(novo == NULL) exit;
+    if(novo == NULL) exit(1);
 
     novo->prox = *li;
     *li = novo;
@@ -22,10 +22,10 @@ void inserirInicio(Lista* li,int valor){
 }
 
 void inserirFinal(Lista* li,int valor){
-    if(li == NULL)exit;
+    if(li == NULL) exit(1);
     
     No *novo = malloc(sizeof(No));
-    if(novo == NULL) exit;
+    if(novo == NULL) exit(1);
 
     novo->dado = valor;
     novo->prox = NULL;

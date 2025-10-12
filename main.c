@@ -31,6 +31,11 @@ int main(){
             printf("Opção 3 salve");
             confimar();
 
+        } else if(atoi(op) == 4){
+            
+            menuVerListas();
+            lerOp();
+
         } else if(strcmp(op,"sair") == 0){
             finalizarPrograma();
         

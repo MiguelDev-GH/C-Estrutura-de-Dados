@@ -38,12 +38,13 @@ void confimar();
 
 void menu();
 void menuEditar();
+void menuVerListas();
 void lerOp();
 
 void finalizarPrograma();
 void opcaoInvalida();
 
-Lista* criarLista();
+Lista criarLista();
 void inserirInicio();
 void inserirFinal();
 
