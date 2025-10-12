@@ -33,6 +33,8 @@ Lista vetorListas[10];
 int valorInserir;
 int listaSelecionada;
 
+int visualizarLista;
+
 // Funções
 void lowercase();
 void strLer();

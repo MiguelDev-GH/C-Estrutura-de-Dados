@@ -61,7 +61,7 @@ void opcao_inserir(){
         printf("\n");
         lerOp();
 
-        if(atoi(op) <= ListaQntd){
+        if(atoi(op) < ListaQntd){
 
             listaSelecionada = atoi(op);
 
@@ -72,9 +72,16 @@ void opcao_inserir(){
             printf("2- Final\n\n");
             lerOp();
             if(atoi(op) == 1){
-                printf("Qual valor você quer inserir?");
+                printf("\nQual valor você quer inserir?\n");
                 scanf("%d",&valorInserir);
-                inserirInicio(vetorListas[listaSelecionada],valorInserir);
+                inserirInicio(&vetorListas[listaSelecionada],valorInserir);
+            } else if(atoi(op) == 2){
+                printf("\nQual valor você quer inserir?\n");
+                scanf("%d",&valorInserir);
+                inserirFinal(&vetorListas[listaSelecionada],valorInserir);   
+            } else{
+                limpar
+                opcaoInvalida();
             }
         }
 
@@ -96,10 +103,23 @@ void menuVerListas(){
             printf(" (%d elementos)\n",tamanhoLista(vetorListas[i]));
         }
         printf("\n");
+        printf("Digite o número da lista para ver os elementos ou <ENTER> para voltar\n");
+        scanf("%d",&visualizarLista);
+
+        if(visualizarLista < ListaQntd){
+            limpar
+            for(int i = 0; i < tamanhoLista(&vetorListas[visualizarLista]); i++){
+                //Imprimir Lista
+            }  
+        } else {
+            exit(1);
+        }
+
     } else {
         printf("Nenhuma lista criada ainda!");
+        confimar();
     }
-    confimar();
+    
 }
 
 void opcao_removerLista(){
