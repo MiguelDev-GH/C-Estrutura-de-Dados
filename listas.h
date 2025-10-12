@@ -13,6 +13,7 @@
 #endif
 
 #define limpar system(LIMPAR);
+void limpar_buffer();
 
 // -------------------------------------- //
 

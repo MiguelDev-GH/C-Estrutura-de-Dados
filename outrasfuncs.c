@@ -17,6 +17,11 @@ void strLer(char *string, size_t tam){
     //printf("\nSTRING: %s\nSizelen: %ld - Sizeof - %ld\n",string,strlen(string),tam);
 }
 
+void limpar_buffer(){
+    int c;
+    while ((c = getchar()) != '\n' && c != EOF);
+}
+
 // Menu e visual
 
 void confimar(){

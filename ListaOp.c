@@ -27,7 +27,7 @@ int tamanhoLista(Lista li){
 void inserirInicio(Lista* li,int valor){
     if(li == NULL) exit(1); 
 
-    No *novo = malloc(sizeof(No));
+    No *novo = (No*) calloc(1,sizeof(No));
     if(novo == NULL) exit(1);
     novo->dado = valor;
     novo->prox = *li;
@@ -38,7 +38,7 @@ void inserirInicio(Lista* li,int valor){
 void inserirFinal(Lista* li,int valor){
     if(li == NULL) exit(1);
     
-    No *novo = malloc(sizeof(No));
+    No *novo = (No*) calloc(1,sizeof(No));
     if(novo == NULL) exit(1);
 
     novo->dado = valor;
@@ -65,17 +65,19 @@ void imprimirLista(Lista* li, int listaNum){
     printf("==> Lista %d\n\n",listaNum);
 
     if(li == NULL) exit(1);
-    if(*li == NULL) printf("Lista vazia\n");
 
-    No *aux = *li;
-    int cont = 0;
+    if(*li == NULL){
+        printf("Lista vazia\n");
+    } else {        
+        No *aux = *li;
+        int cont = 0;
 
-    while(aux->prox != NULL){
-        printf("%d- %d\n",cont,aux->dado);
-        aux = aux->prox;
-        cont++;
+        while(aux->prox != NULL){
+            printf("%d- %d\n",cont,aux->dado);
+            aux = aux->prox;
+            cont++;
+        }
     }
-
     confimar();
 
 }
