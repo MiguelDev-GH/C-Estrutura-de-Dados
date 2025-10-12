@@ -19,8 +19,8 @@ int main(){
             lerOp();
 
             if(atoi(op) == 1){
-                printf("Inserir elemento");
-                confimar();
+                opcao_inserir();
+
             } else if(atoi(op) == 2){
                 printf("Remover elemento");
                 confimar();
@@ -34,7 +34,6 @@ int main(){
         } else if(atoi(op) == 4){
             
             menuVerListas();
-            lerOp();
 
         } else if(strcmp(op,"sair") == 0){
             finalizarPrograma();

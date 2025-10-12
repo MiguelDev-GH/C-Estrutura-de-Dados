@@ -10,6 +10,20 @@ Lista criarLista(){
         return li;
 }
 
+int tamanhoLista(Lista li){
+    int tam = 0;
+    if(li == NULL) exit(1); 
+
+    No *aux = li;
+    
+    while (aux->prox != NULL){
+        aux = aux->prox;
+        tam++;
+    }
+
+    return tam;
+}
+
 void inserirInicio(Lista* li,int valor){
     if(li == NULL) exit(1); 
 

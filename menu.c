@@ -35,7 +35,6 @@ void opcao_criarLista(){
 
     } else {
         printf("Operação cancelada");
-        printf("%s",op);
         confimar();
     }
 }
@@ -50,15 +49,41 @@ void menuEditar(){
     printf("Outra opção ou enter para voltar\n");
 }
 
+void opcao_inserir(){
+    limpar
+    printf("=+----INSERIR----+=\n");
+    printf("Escolha em qual lista você deseja inserir um elemento (Digite o número): \n\n");
+    if(ListaQntd > 0){
+        for(int i = 0; i < ListaQntd; i++){
+            printf("%d- Lista %d\n",i,i);
+        }
+        printf("\n");
+        lerOp();
+
+        // Perguntar pro usuário onde que ele quer inserir o elemento na lista!!!!!!!!!!
+
+    } else {
+        printf("Nenhuma lista criada ainda!");
+        confimar();
+        return;
+    }
+
+}
+
 void menuVerListas(){
     limpar
     printf("=+-----LISTAS----+=\n\n");
-    
-    for(int i = 0; i < ListaQntd; i++){
-        printf("Lista %d\n",i);
-    }
 
-    printf("\n");
+    if(ListaQntd > 0){
+        for(int i = 0; i < ListaQntd; i++){
+            printf("Lista %d",i);
+            printf(" (%d elementos)\n",tamanhoLista(vetorListas[i]));
+        }
+        printf("\n");
+    } else {
+        printf("Nenhuma lista criada ainda!");
+    }
+    confimar();
 }
 
 void opcao_removerLista(){

@@ -44,6 +44,8 @@ void lerOp();
 void finalizarPrograma();
 void opcaoInvalida();
 
+int tamanhoLista();
+
 Lista criarLista();
 void inserirInicio();
 void inserirFinal();
