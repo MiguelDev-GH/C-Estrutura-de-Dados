@@ -54,6 +54,7 @@ int tamanhoLista();
 Lista criarLista();
 void inserirInicio();
 void inserirFinal();
+void imprimirLista();
 
 // -------------------------------------- //
 

@@ -104,7 +104,19 @@ void menuVerListas(){
         }
         printf("\n");
         printf("Digite o número da lista para ver os elementos ou <ENTER> para voltar\n");
-        scanf("%d",&visualizarLista);
+        lerOp();
+
+        if(atoi(op) < ListaQntd){
+
+            listaSelecionada = atoi(op);
+            imprimirLista(&vetorListas[listaSelecionada]);
+
+        } else if(strcmp(op,"\n")){
+            limpar
+        } else {
+            limpar
+            opcaoInvalida();
+        }
 
         if(visualizarLista < ListaQntd){
             limpar

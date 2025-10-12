@@ -58,11 +58,15 @@ void inserirFinal(Lista* li,int valor){
 
 }
 
-void imprimirLsta(Lista* li){
+void imprimirLista(Lista* li){
+
+    limpar
+
     if(li == NULL) exit(1);
     if(*li == NULL) printf("Lista vazia\n");
 
     //No *aux = li;
 
-    
+    confimar();
+
 }
