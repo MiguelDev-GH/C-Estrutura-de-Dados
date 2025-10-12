@@ -9,17 +9,21 @@ int main(){
     do{
         menu();
 
-        printf("\n>>> ");
-        strLer(op,sizeof op);
-        lowercase(op);
+        lerOp();
 
         if(atoi(op) == 1){
             opcao_criarLista();
 
         } else if(atoi(op) == 2){
-            limpar
-            printf("Opção 2 salve");
-            confimar();
+            menuEditar();
+
+            if(atoi(op) == 1){
+                printf("Inserir elemento;");
+                confimar();
+            } else if(atoi(op) == 2){
+                printf("Remover elemento;");
+                confimar();
+            }
 
         } else if(atoi(op) == 3){
             limpar

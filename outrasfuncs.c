@@ -32,17 +32,14 @@ void finalizarPrograma(){
     exit(0);
 }
 
-void menu(){
-    limpar
-    printf("=+-----LISTAS-----+=\n\n");
-    printf("1- Criar \n");
-    printf("2- Editar\n");
-    printf("3- Deletar\n\n");
-    printf("SAIR para encerrar o programa\n");
-}
-
 void opcaoInvalida(){
     limpar
     printf("Opção inválida, escreva algo válido!");
     confimar();
+}
+
+void lerOp(){
+    printf("\n>>> ");
+    strLer(op,sizeof op);
+    lowercase(op);
 }

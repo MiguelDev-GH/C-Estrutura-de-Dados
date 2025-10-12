@@ -34,9 +34,14 @@ void strLer();
 void confimar();
 
 void menu();
+void menuEditar();
+void lerOp();
 
 void finalizarPrograma();
 void opcaoInvalida();
+
+void inserirInicio();
+void inserirFinal();
 
 // -------------------------------------- //
 
