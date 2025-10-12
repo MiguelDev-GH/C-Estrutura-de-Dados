@@ -53,6 +53,7 @@ void opcao_inserir(){
     limpar
     printf("=+----INSERIR----+=\n");
     printf("Escolha em qual lista você deseja inserir um elemento (Digite o número): \n\n");
+
     if(ListaQntd > 0){
         for(int i = 0; i < ListaQntd; i++){
             printf("%d- Lista %d\n",i,i);
@@ -60,7 +61,22 @@ void opcao_inserir(){
         printf("\n");
         lerOp();
 
-        // Perguntar pro usuário onde que ele quer inserir o elemento na lista!!!!!!!!!!
+        if(atoi(op) <= ListaQntd){
+
+            listaSelecionada = atoi(op);
+
+            limpar
+            printf("=+----INSERIR----+=\n");
+            printf("Onde quer inserir na Lista %d?\n\n",listaSelecionada);
+            printf("1- Inicio\n");
+            printf("2- Final\n\n");
+            lerOp();
+            if(atoi(op) == 1){
+                printf("Qual valor você quer inserir?");
+                scanf("%d",&valorInserir);
+                inserirInicio(vetorListas[listaSelecionada],valorInserir);
+            }
+        }
 
     } else {
         printf("Nenhuma lista criada ainda!");

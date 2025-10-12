@@ -30,6 +30,9 @@ char op[4];
 int ListaQntd;
 Lista vetorListas[10];
 
+int valorInserir;
+int listaSelecionada;
+
 // Funções
 void lowercase();
 void strLer();
