@@ -16,12 +16,13 @@ int main(){
 
         } else if(atoi(op) == 2){
             menuEditar();
+            lerOp();
 
             if(atoi(op) == 1){
-                printf("Inserir elemento;");
+                printf("Inserir elemento");
                 confimar();
             } else if(atoi(op) == 2){
-                printf("Remover elemento;");
+                printf("Remover elemento");
                 confimar();
             }
 

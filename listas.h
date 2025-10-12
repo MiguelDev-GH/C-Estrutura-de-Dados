@@ -27,6 +27,9 @@ typedef struct No* Lista;
 // Variáveis
 char op[4];
 
+int ListaQntd;
+Lista vetorListas[10];
+
 // Funções
 void lowercase();
 void strLer();
@@ -40,6 +43,7 @@ void lerOp();
 void finalizarPrograma();
 void opcaoInvalida();
 
+Lista* criarLista();
 void inserirInicio();
 void inserirFinal();
 
