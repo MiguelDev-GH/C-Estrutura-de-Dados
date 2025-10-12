@@ -57,3 +57,12 @@ void inserirFinal(Lista* li,int valor){
     novo->prox = NULL;
 
 }
+
+void imprimirLsta(Lista* li){
+    if(li == NULL) exit(1);
+    if(*li == NULL) printf("Lista vazia\n");
+
+    //No *aux = li;
+
+    
+}
