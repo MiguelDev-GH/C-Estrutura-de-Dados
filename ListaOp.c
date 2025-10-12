@@ -29,7 +29,7 @@ void inserirInicio(Lista* li,int valor){
 
     No *novo = malloc(sizeof(No));
     if(novo == NULL) exit(1);
-
+    novo->dado = valor;
     novo->prox = *li;
     *li = novo;
 
@@ -58,14 +58,23 @@ void inserirFinal(Lista* li,int valor){
 
 }
 
-void imprimirLista(Lista* li){
+void imprimirLista(Lista* li, int listaNum){
 
     limpar
+
+    printf("==> Lista %d\n\n",listaNum);
 
     if(li == NULL) exit(1);
     if(*li == NULL) printf("Lista vazia\n");
 
-    //No *aux = li;
+    No *aux = *li;
+    int cont = 0;
+
+    while(aux->prox != NULL){
+        printf("%d- %d\n",cont,aux->dado);
+        aux = aux->prox;
+        cont++;
+    }
 
     confimar();
 

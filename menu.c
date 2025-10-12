@@ -109,22 +109,13 @@ void menuVerListas(){
         if(atoi(op) < ListaQntd){
 
             listaSelecionada = atoi(op);
-            imprimirLista(&vetorListas[listaSelecionada]);
+            imprimirLista(&vetorListas[listaSelecionada],listaSelecionada);
 
         } else if(strcmp(op,"\n")){
             limpar
         } else {
             limpar
             opcaoInvalida();
-        }
-
-        if(visualizarLista < ListaQntd){
-            limpar
-            for(int i = 0; i < tamanhoLista(&vetorListas[visualizarLista]); i++){
-                //Imprimir Lista
-            }  
-        } else {
-            exit(1);
         }
 
     } else {
