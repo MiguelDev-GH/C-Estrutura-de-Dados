@@ -1,4 +1,4 @@
-#include "arquivos.c"
+#include "programa/arquivos.c"
 
 int main(){
 

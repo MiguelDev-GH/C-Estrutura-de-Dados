@@ -52,9 +52,9 @@ void menuEditar(){
 void opcao_inserir(){
     limpar
     printf("=+----INSERIR----+=\n");
-    printf("Escolha em qual lista você deseja inserir um elemento (Digite o número): \n\n");
 
     if(ListaQntd > 0){
+        printf("Escolha em qual lista você deseja inserir um elemento (Digite o número): \n\n");
         for(int i = 0; i < ListaQntd; i++){
             printf("%d- Lista %d\n",i,i);
         }
