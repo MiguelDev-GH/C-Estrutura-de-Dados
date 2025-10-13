@@ -3,7 +3,7 @@
 //Funções de inserir
 
 Lista criarLista(){
-    void *li = malloc(sizeof(Lista));
+    void *li = calloc(1,sizeof(Lista));
     if(li == NULL)
         exit(1);
     else
@@ -44,8 +44,10 @@ void inserirFinal(Lista* li,int valor){
     novo->dado = valor;
     novo->prox = NULL;
 
-    if(*li == NULL)
+    if(*li == NULL){
         *li = novo;
+        return;
+    }
 
     No *aux = *li;
 
