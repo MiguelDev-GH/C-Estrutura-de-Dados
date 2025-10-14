@@ -83,3 +83,7 @@ void imprimirLista(Lista* li, int listaNum){
     confimar();
 
 }
+
+void excluirLista(Lista* li){
+    li = NULL;
+}

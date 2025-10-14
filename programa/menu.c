@@ -129,8 +129,21 @@ void menuVerListas(){
     
 }
 
-void opcao_removerLista(){
+void opcao_removerLista(int numLista){    
     limpar
-    printf("Editar lista");
-    confimar();
+    printf("Qual lista você deseja excluir: ");
+    lerOp();
+    
+    if(atoi(op) < ListaQntd){
+        limpar
+        printf("Tem certeza que deseja excluir a Lista %d (s/n)", numLista);
+        lerOp();
+
+        if(op == "sim", op == "s"){
+            vetorListas[numLista] = NULL;
+        }
+
+    } else {
+        return;
+    }
 }
