@@ -40,7 +40,7 @@ int visualizarLista;
 void lowercase();
 void strLer();
 
-void confimar();
+void confirmar();
 
 void menu();
 void menuEditar();
@@ -56,6 +56,7 @@ Lista criarLista();
 void inserirInicio();
 void inserirFinal();
 void imprimirLista();
+void excluirLista();
 
 // -------------------------------------- //
 

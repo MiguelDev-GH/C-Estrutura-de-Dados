@@ -24,7 +24,7 @@ void limpar_buffer(){
 
 // Menu e visual
 
-void confimar(){
+void confirmar(){
     char c;
     printf("\n\nAperte <ENTER> para voltar\n");
     scanf("%*[^\n]%*c");
@@ -40,7 +40,7 @@ void finalizarPrograma(){
 void opcaoInvalida(){
     limpar
     printf("Opção inválida, escreva algo válido!");
-    confimar();
+    confirmar();
 }
 
 void lerOp(){

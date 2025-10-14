@@ -23,13 +23,11 @@ int main(){
 
             } else if(atoi(op) == 2){
                 printf("Remover elemento");
-                confimar();
+                confirmar();
             }
 
         } else if(atoi(op) == 3){
-            limpar
-            printf("Opção 3 salve");
-            confimar();
+            opcao_removerLista();
 
         } else if(atoi(op) == 4){
             

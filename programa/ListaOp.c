@@ -80,10 +80,18 @@ void imprimirLista(Lista* li, int listaNum){
             cont++;
         }
     }
-    confimar();
+    confirmar();
 
 }
 
-void excluirLista(Lista* li){
-    li = NULL;
+void excluirLista(int numLista){
+    limpar
+    printf("Tem certeza que deseja excluir a Lista %d (s/n)", numLista);
+    lerOp();
+
+    if(op == "sim", op == "s"){
+        vetorListas[numLista] = NULL;
+        ListaQntd--;
+        free(vetorListas[numLista]);
+    }
 }

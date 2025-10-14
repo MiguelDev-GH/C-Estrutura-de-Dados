@@ -25,17 +25,17 @@ void opcao_criarLista(){
 
         if(vetorListas[ListaQntd] == NULL){
             printf("Erro na criação da lista");
-            confimar();
+            confirmar();
             return;
         } else{
             printf("Lista %d criada com sucesso!",ListaQntd);
             ListaQntd++;
-            confimar();
+            confirmar();
         }
 
     } else {
         printf("Operação cancelada");
-        confimar();
+        confirmar();
     }
 }
 
@@ -91,7 +91,7 @@ void opcao_inserir(){
 
     } else {
         printf("Nenhuma lista criada ainda!");
-        confimar();
+        confirmar();
         return;
     }
 
@@ -124,27 +124,22 @@ void menuVerListas(){
 
     } else {
         printf("Nenhuma lista criada ainda!");
-        confimar();
+        confirmar();
     }
     
 }
 
-void opcao_removerLista(Lista* li, int numLista){    
+void opcao_removerLista(){    
     limpar
     printf("Qual lista você deseja excluir: ");
     lerOp();
     
     if(atoi(op) < ListaQntd){
-        limpar
-        printf("Tem certeza que deseja excluir a Lista %d (s/n)", numLista);
-        lerOp();
-
-        if(op == "sim", op == "s"){
-            vetorListas[numLista] = NULL;
-            free(li);
-        }
+        excluirLista(atoi(op));
 
     } else {
-        return;
+        limpar
+        printf("Lista não encontrada");
+        confirmar();
     }
 }
