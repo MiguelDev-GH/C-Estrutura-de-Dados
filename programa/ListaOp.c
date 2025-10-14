@@ -84,13 +84,39 @@ void imprimirLista(Lista* li, int listaNum){
 
 }
 
+void removerInicio(Lista* li){
+    if(li == NULL) return;
+    if(*li == NULL) return;
+
+    *li = (*li)->prox;
+
+    free(*li);
+
+}
+
+void removerFinal(Lista* li){
+    if(li == NULL) return;
+    if(*li == NULL) return;
+
+    No* aux = *li;
+    No* anterior = aux;
+
+    while (aux->prox != NULL){
+        aux = aux->prox;
+        anterior = aux;
+    }
+
+    anterior->prox = NULL;
+    free(NULL);
+    
+}
+
 void excluirLista(int numLista){
     limpar
     printf("Tem certeza que deseja excluir a Lista %d (s/n)", numLista);
     lerOp();
 
-    if(op == "sim", op == "s"){
-        vetorListas[numLista] = NULL;
+    if(strcmp(op,"sim") == 0 || strcmp(op,"s") == 0){
         ListaQntd--;
         free(vetorListas[numLista]);
     }

@@ -143,3 +143,46 @@ void opcao_removerLista(){
         confirmar();
     }
 }
+
+void opcao_removerElemento(){
+    limpar
+    printf("=+----INSERIR----+=\n");
+
+    if(ListaQntd > 0){
+        printf("Escolha em qual lista você deseja remover um elemento (Digite o número): \n\n");
+        for(int i = 0; i < ListaQntd; i++){
+            printf("%d- Lista %d\n",i,i);
+        }
+        printf("\n");
+        lerOp();
+
+        if(op[0] == '\n'){
+            return;
+        } else if(atoi(op) < ListaQntd){
+
+            listaSelecionada = atoi(op);
+
+            limpar
+            printf("=+----INSERIR----+=\n");
+            printf("Onde quer remover um elemento da Lista %d?\n\n",listaSelecionada);
+            printf("1- Inicio\n");
+            printf("2- Final\n\n");
+            lerOp();
+            if(atoi(op) == 1){
+                removerInicio(&vetorListas[listaSelecionada]);
+            } else if(atoi(op) == 2){
+                removerFinal(&vetorListas[listaSelecionada]);   
+            } else{
+                limpar
+                opcaoInvalida();
+                return;
+            }
+        }
+
+    } else {
+        printf("Nenhuma lista criada ainda!");
+        confirmar();
+        return;
+    }
+
+}

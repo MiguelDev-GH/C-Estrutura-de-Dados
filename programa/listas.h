@@ -58,6 +58,12 @@ void inserirFinal();
 void imprimirLista();
 void excluirLista();
 
+void opcao_inserir();
+void opcao_removerElemento();
+
+void removerInicio();
+void removerFinal();
+
 // -------------------------------------- //
 
 #endif

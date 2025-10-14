@@ -22,8 +22,7 @@ int main(){
                 opcao_inserir();
 
             } else if(atoi(op) == 2){
-                printf("Remover elemento");
-                confirmar();
+                opcao_removerElemento();
             }
 
         } else if(atoi(op) == 3){
