@@ -12,7 +12,7 @@ Lista* criarLista(){
 
 int tamanhoLista(Lista* li){
     int tam = 0;
-    if(li == NULL) exit(1); 
+    if(li == NULL) return 0; 
 
     if(*li == NULL) return 0;
 
@@ -126,13 +126,25 @@ void removerElementoEspec(Lista* li, int posicao){
     // Continuar função
 }
 
-void excluirLista(Lista* vetorLista, int numLista){
+void excluirLista(Lista* li, int numLista){
     limpar
     printf("Tem certeza que deseja excluir a Lista %d (s/n)", numLista);
     lerOp();
 
     if(strcmp(op,"sim") == 0 || strcmp(op,"s") == 0){
+
+        No* aux = *li;
+        aux = aux->prox;
+        No* temp;
+
+        while(aux != NULL){
+            temp = aux;
+            aux = aux->prox;
+            free(temp);
+        }
+
         ListaQntd--;
-        free(vetorLista[numLista]);
+        free(*li);
+
     }
 }
