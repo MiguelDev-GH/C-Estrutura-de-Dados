@@ -2,7 +2,7 @@
 
 //Funções de inserir
 
-Lista criarLista(){
+Lista* criarLista(){
     void *li = calloc(1,sizeof(Lista));
     if(li == NULL)
         exit(1);
@@ -10,13 +10,15 @@ Lista criarLista(){
         return li;
 }
 
-int tamanhoLista(Lista li){
+int tamanhoLista(Lista* li){
     int tam = 0;
     if(li == NULL) exit(1); 
 
-    No *aux = li;
+    if(*li == NULL) return 0;
+
+    No* aux = *li;
     
-    while (aux->prox != NULL){
+    while (aux != NULL){
         aux = aux->prox;
         tam++;
     }
@@ -27,7 +29,7 @@ int tamanhoLista(Lista li){
 void inserirInicio(Lista* li,int valor){
     if(li == NULL) exit(1); 
 
-    No *novo = (No*) calloc(1,sizeof(No));
+    No* novo = (No*) calloc(1,sizeof(No));
     if(novo == NULL) exit(1);
     novo->dado = valor;
     novo->prox = *li;
@@ -38,7 +40,7 @@ void inserirInicio(Lista* li,int valor){
 void inserirFinal(Lista* li,int valor){
     if(li == NULL) exit(1);
     
-    No *novo = (No*) calloc(1,sizeof(No));
+    No* novo = (No*) calloc(1,sizeof(No));
     if(novo == NULL) exit(1);
 
     novo->dado = valor;
@@ -49,7 +51,7 @@ void inserirFinal(Lista* li,int valor){
         return;
     }
 
-    No *aux = *li;
+    No* aux = *li;
 
     while (aux->prox != NULL){
         aux = aux->prox;
@@ -71,10 +73,10 @@ void imprimirLista(Lista* li, int listaNum){
     if(*li == NULL){
         printf("Lista vazia\n");
     } else {        
-        No *aux = *li;
+        No* aux = *li;
         int cont = 0;
 
-        while(aux->prox != NULL){
+        while(aux != NULL){
             printf("%d- %d\n",cont,aux->dado);
             aux = aux->prox;
             cont++;
@@ -88,9 +90,10 @@ void removerInicio(Lista* li){
     if(li == NULL) return;
     if(*li == NULL) return;
 
-    *li = (*li)->prox;
+    No* remover = *li;
+    *li = remover->prox;
 
-    free(*li);
+    free(remover);
 
 }
 
@@ -101,7 +104,7 @@ void removerFinal(Lista* li){
     No* aux = *li;
     No* anterior = aux;
 
-    while (aux->prox != NULL){
+    while (aux != NULL){
         aux = aux->prox;
         anterior = aux;
     }

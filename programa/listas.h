@@ -52,7 +52,7 @@ void opcaoInvalida();
 
 int tamanhoLista();
 
-Lista criarLista();
+Lista* criarLista();
 void inserirInicio();
 void inserirFinal();
 void imprimirLista();
