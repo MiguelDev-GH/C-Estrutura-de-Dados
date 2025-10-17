@@ -74,7 +74,7 @@ void imprimirLista(Lista* li, int listaNum){
         printf("Lista vazia\n");
     } else {        
         No* aux = *li;
-        int cont = 0;
+        int cont = 1;
 
         while(aux != NULL){
             printf("%d- %d\n",cont,aux->dado);
@@ -104,7 +104,7 @@ void removerFinal(Lista* li){
     No* aux = *li;
     No* anterior = aux;
 
-    while (aux != NULL){
+    while (aux->prox != NULL){
         anterior = aux;
         aux = aux->prox;
     }
