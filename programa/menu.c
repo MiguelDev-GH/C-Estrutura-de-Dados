@@ -21,7 +21,7 @@ void opcao_criarLista(){
     limpar
     if((strcmp(op,"s") == 0 || strcmp(op,"sim") == 0) && ListaQntd < 10){
         
-        vetorListas[ListaQntd] = *criarLista();
+        vetorListas[ListaQntd] = criarLista();
 
         if(vetorListas[ListaQntd] == NULL){
             printf("Erro na criação da lista");
@@ -135,7 +135,7 @@ void opcao_removerLista(){
     lerOp();
     
     if(atoi(op) < ListaQntd){
-        excluirLista(atoi(op));
+        excluirLista(vetorListas,atoi(op));
 
     } else {
         limpar

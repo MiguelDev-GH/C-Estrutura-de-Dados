@@ -29,7 +29,7 @@ typedef struct No* Lista;
 char op[4];
 
 int ListaQntd;
-Lista vetorListas[10];
+Lista* vetorListas[10];
 
 int valorInserir;
 int listaSelecionada;

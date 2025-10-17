@@ -110,17 +110,17 @@ void removerFinal(Lista* li){
     }
 
     anterior->prox = NULL;
-    free(NULL);
+    free(aux);
     
 }
 
-void excluirLista(int numLista){
+void excluirLista(Lista* vetorLista, int numLista){
     limpar
     printf("Tem certeza que deseja excluir a Lista %d (s/n)", numLista);
     lerOp();
 
     if(strcmp(op,"sim") == 0 || strcmp(op,"s") == 0){
         ListaQntd--;
-        free(vetorListas[numLista]);
+        free(vetorLista[numLista]);
     }
 }
