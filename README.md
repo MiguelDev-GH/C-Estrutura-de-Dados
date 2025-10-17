@@ -3,9 +3,9 @@ Um projeto para treinamento de **listas em C** que se resume em um programa de c
 
 ### Algumas funcionalidades até agora: 
 - Criar listas;
-- Adicionar elementos;
+- Adicionar elementos *(Apenas em início e final)*;
 - Visualizar elementos;
-- Remover elementos *(Não completo)*;
+- Remover elementos *(Apenas em início e final)*;
 - Excluir listas;
 
 ### Ainda para adicionar: 

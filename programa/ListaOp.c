@@ -119,6 +119,13 @@ void removerFinal(Lista* li){
     
 }
 
+void removerElementoEspec(Lista* li, int posicao){
+    if(li == NULL) return;
+    if(*li == NULL) return;
+
+    // Continuar função
+}
+
 void excluirLista(Lista* vetorLista, int numLista){
     limpar
     printf("Tem certeza que deseja excluir a Lista %d (s/n)", numLista);

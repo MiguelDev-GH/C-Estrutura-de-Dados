@@ -31,6 +31,7 @@ char op[4];
 int ListaQntd;
 Lista* vetorListas[10];
 
+int posNaLista;
 int valorInserir;
 int listaSelecionada;
 
@@ -63,6 +64,7 @@ void opcao_removerElemento();
 
 void removerInicio();
 void removerFinal();
+void removerElementoEspec();
 
 // -------------------------------------- //
 

@@ -167,11 +167,26 @@ void opcao_removerElemento(){
             printf("Onde quer remover um elemento da Lista %d?\n\n",listaSelecionada);
             printf("1- Inicio\n");
             printf("2- Final\n\n");
+            printf("3- Posição específica\n\n");
             lerOp();
             if(atoi(op) == 1){
                 removerInicio(vetorListas[listaSelecionada]);
             } else if(atoi(op) == 2){
                 removerFinal(vetorListas[listaSelecionada]);   
+            } else if(atoi(op) == 3){
+                limpar
+                printf("Deseja remover um elemento em qual posição? (Começando por 1)");
+                lerOp();
+                posNaLista = atoi(op);
+
+                if(posNaLista <= tamanhoLista(vetorListas[listaSelecionada])){
+                    removerElementoEspec(vetorListas[listaSelecionada],posNaLista);
+                } else{
+                    limpar
+                    printf("Posição inexistente na Lista %d",listaSelecionada);
+                    confirmar();
+                }
+
             } else{
                 limpar
                 opcaoInvalida();
