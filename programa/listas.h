@@ -6,10 +6,10 @@
 #include <ctype.h>
 #include <string.h>
 
-#ifdef _WIN64
-    #define LIMPAR "cls"
-#else
+#ifndef _WIN64
     #define LIMPAR "clear"
+#else
+    #define LIMPAR "cls"
 #endif
 
 #define limpar system(LIMPAR);
