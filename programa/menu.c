@@ -166,7 +166,7 @@ void opcao_removerElemento(){
             printf("=+----INSERIR----+=\n");
             printf("Onde quer remover um elemento da Lista %d?\n\n",listaSelecionada);
             printf("1- Inicio\n");
-            printf("2- Final\n\n");
+            printf("2- Final\n");
             printf("3- Posição específica\n\n");
             lerOp();
             if(atoi(op) == 1){

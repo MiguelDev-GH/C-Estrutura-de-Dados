@@ -5,7 +5,7 @@ Um projeto para treinamento de **listas em C** que se resume em um programa de c
 - Criar listas;
 - Adicionar elementos *(Apenas em início e final)*;
 - Visualizar elementos;
-- Remover elementos *(Apenas em início e final)*;
+- Remover elementos
 - Excluir listas;
 
 ### Ainda para adicionar: 

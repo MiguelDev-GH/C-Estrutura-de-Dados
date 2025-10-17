@@ -62,6 +62,28 @@ void inserirFinal(Lista* li,int valor){
 
 }
 
+void inserirElementoEspec(Lista* li, int valor, int posicao){
+    if(li == NULL) return;
+    
+    No* aux = *li;
+    No* anterior = NULL;
+
+    for(int i = 1;i <= posicao;i++){
+        anterior = aux;
+        aux = aux->prox;
+    }
+
+    limpar
+
+    printf("Anterior: %d\n",anterior->dado);
+    printf("Aux: %d\n",aux->dado);
+
+    confirmar();
+
+    //CONTINUAR IMPLEMENTAÇÃO AQUI!
+
+}
+
 void imprimirLista(Lista* li, int listaNum){
 
     limpar
@@ -134,7 +156,7 @@ void removerElementoEspec(Lista* li, int posicao){
     limpar
 
     anterior->prox = aux->prox;
-    
+
     printf("Elemento %d removido com sucesso!",aux->dado);
     free(aux);
 
