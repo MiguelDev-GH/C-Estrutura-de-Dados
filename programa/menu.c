@@ -47,6 +47,14 @@ void menuEditar(){
     printf("1- Inserir elemento em tal lista \n");
     printf("2- Remover elemento \n\n");
     printf("Outra opção ou enter para voltar\n");
+    lerOp();
+
+    if(atoi(op) == 1){
+        opcao_inserir();
+
+    } else if(atoi(op) == 2){
+        opcao_removerElemento();
+    }
 }
 
 void opcao_inserir(){

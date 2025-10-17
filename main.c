@@ -21,14 +21,6 @@ int main(){
 
         } else if(atoi(op) == 2){
             menuEditar();
-            lerOp();
-
-            if(atoi(op) == 1){
-                opcao_inserir();
-
-            } else if(atoi(op) == 2){
-                opcao_removerElemento();
-            }
 
         } else if(atoi(op) == 3){
             opcao_removerLista();
@@ -43,6 +35,8 @@ int main(){
         } else{
             opcaoInvalida();
         }
+
+        limpar_buffer();
 
     }while(rodando);
 

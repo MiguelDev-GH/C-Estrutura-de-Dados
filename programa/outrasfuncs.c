@@ -1,5 +1,10 @@
 #include "listas.h"
 
+void limpar_buffer(){
+    int c;
+    while ((c = getchar()) != '\n' && c != EOF);
+}
+
 void lowercase(char *c){
     for(int i = 0; c[i] != '\0' ;i++){
         c[i] = tolower(c[i]);
@@ -15,11 +20,6 @@ void strLer(char *string, size_t tam){
     }
 
     //printf("\nSTRING: %s\nSizelen: %ld - Sizeof - %ld\n",string,strlen(string),tam);
-}
-
-void limpar_buffer(){
-    int c;
-    while ((c = getchar()) != '\n' && c != EOF);
 }
 
 // Menu e visual
