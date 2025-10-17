@@ -68,19 +68,18 @@ void inserirElementoEspec(Lista* li, int valor, int posicao){
     No* aux = *li;
     No* anterior = NULL;
 
-    for(int i = 1;i <= posicao;i++){
+    No* novoElemento = (No*) malloc(sizeof(Lista));
+    if(novoElemento == NULL) return;
+
+    novoElemento->dado = valor;
+
+    for(int i = 1;i < posicao;i++){
         anterior = aux;
         aux = aux->prox;
     }
 
-    limpar
-
-    printf("Anterior: %d\n",anterior->dado);
-    printf("Aux: %d\n",aux->dado);
-
-    confirmar();
-
-    //CONTINUAR IMPLEMENTAÇÃO AQUI!
+    anterior->prox = novoElemento;
+    novoElemento->prox = aux;
 
 }
 

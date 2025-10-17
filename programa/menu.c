@@ -71,18 +71,27 @@ void opcao_inserir(){
             printf("=+----INSERIR----+=\n");
             printf("Onde quer inserir na Lista %d?\n\n",listaSelecionada);
             printf("1- Inicio\n");
-            printf("2- Final\n\n");
+            printf("2- Final\n");
+            printf("3- Posição específica\n\n");
             lerOp();
-            if(atoi(op) == 1){
+            if(atoi(op) == 1 || atoi(op) == 2 || atoi(op) == 3){
+
+                limpar
                 printf("\nQual valor você quer inserir?\n");
                 scanf("%d",&valorInserir);
                 limpar_buffer();
-                inserirInicio(vetorListas[listaSelecionada],valorInserir);
-            } else if(atoi(op) == 2){
-                printf("\nQual valor você quer inserir?\n");
-                scanf("%d",&valorInserir);
-                limpar_buffer();
-                inserirFinal(vetorListas[listaSelecionada],valorInserir);   
+
+                if(atoi(op) == 1) inserirInicio(vetorListas[listaSelecionada],valorInserir);
+
+                if(atoi(op) == 2) inserirFinal(vetorListas[listaSelecionada],valorInserir);   
+                
+                if(atoi(op) == 3){
+                    printf("Em qual posição deseja inserir?");
+                    printf("(Tamanho da Lista %d: %d)",listaSelecionada,tamanhoLista(vetorListas[listaSelecionada]));
+                    scanf("%d",&posNaLista);
+                    inserirElementoEspec(vetorListas[listaSelecionada],valorInserir,posNaLista);
+                } 
+
             } else{
                 limpar
                 opcaoInvalida();

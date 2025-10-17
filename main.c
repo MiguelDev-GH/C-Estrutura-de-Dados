@@ -4,6 +4,11 @@ int main(){
 
     int rodando = 1;
 
+    vetorListas[0] = criarLista();
+    inserirInicio(vetorListas[0],1);
+    inserirFinal(vetorListas[0],3);
+    ListaQntd++;
+
     limpar
 
     do{

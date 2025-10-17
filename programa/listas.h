@@ -61,6 +61,7 @@ void excluirLista();
 
 void opcao_inserir();
 void opcao_removerElemento();
+void inserirElementoEspec();
 
 void removerInicio();
 void removerFinal();
