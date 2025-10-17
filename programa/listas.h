@@ -6,7 +6,7 @@
 #include <ctype.h>
 #include <string.h>
 
-#ifdef _WIN64
+#ifndef _WIN64
     #define LIMPAR "cls"
 #else
     #define LIMPAR "clear"

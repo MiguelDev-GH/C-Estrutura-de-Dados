@@ -123,7 +123,28 @@ void removerElementoEspec(Lista* li, int posicao){
     if(li == NULL) return;
     if(*li == NULL) return;
 
-    // Continuar função
+    No* aux = *li;
+    No* anterior = NULL;
+
+    for(int i = 1; i < posicao; i++){
+        anterior = aux;
+        aux = aux->prox;
+    }
+
+    limpar
+
+    anterior->prox = aux->prox;
+    
+    printf("Elemento %d removido com sucesso!",aux->dado);
+    free(aux);
+
+    confirmar();
+
+    /*
+    printf("Elemento %d removido com sucesso!",aux->dado);
+    free(aux);
+    confirmar();
+    */
 }
 
 void excluirLista(Lista* vetorLista, int numLista){
