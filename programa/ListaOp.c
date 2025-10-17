@@ -105,8 +105,13 @@ void removerFinal(Lista* li){
     No* anterior = aux;
 
     while (aux != NULL){
-        aux = aux->prox;
         anterior = aux;
+        aux = aux->prox;
+    }
+
+    if(anterior == NULL){
+        *li = NULL;
+        free(*li);
     }
 
     anterior->prox = NULL;

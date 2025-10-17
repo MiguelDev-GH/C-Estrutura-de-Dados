@@ -77,12 +77,12 @@ void opcao_inserir(){
                 printf("\nQual valor você quer inserir?\n");
                 scanf("%d",&valorInserir);
                 limpar_buffer();
-                inserirInicio(&vetorListas[listaSelecionada],valorInserir);
+                inserirInicio(vetorListas[listaSelecionada],valorInserir);
             } else if(atoi(op) == 2){
                 printf("\nQual valor você quer inserir?\n");
                 scanf("%d",&valorInserir);
                 limpar_buffer();
-                inserirFinal(&vetorListas[listaSelecionada],valorInserir);   
+                inserirFinal(vetorListas[listaSelecionada],valorInserir);   
             } else{
                 limpar
                 opcaoInvalida();
@@ -113,7 +113,7 @@ void menuVerListas(){
         if(atoi(op) < ListaQntd){
 
             listaSelecionada = atoi(op);
-            imprimirLista(&vetorListas[listaSelecionada],listaSelecionada);
+            imprimirLista(vetorListas[listaSelecionada],listaSelecionada);
 
         } else if(strcmp(op,"\n") == 0){
             limpar
@@ -169,9 +169,9 @@ void opcao_removerElemento(){
             printf("2- Final\n\n");
             lerOp();
             if(atoi(op) == 1){
-                removerInicio(&vetorListas[listaSelecionada]);
+                removerInicio(vetorListas[listaSelecionada]);
             } else if(atoi(op) == 2){
-                removerFinal(&vetorListas[listaSelecionada]);   
+                removerFinal(vetorListas[listaSelecionada]);   
             } else{
                 limpar
                 opcaoInvalida();
