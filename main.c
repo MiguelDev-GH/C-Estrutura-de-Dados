@@ -40,8 +40,6 @@ int main(){
             opcaoInvalida();
         }
 
-        limpar_buffer();
-
     }while(rodando);
 
     return 0;
