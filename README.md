@@ -8,3 +8,14 @@ Um projeto para treinamento de **listas em C** que se resume em um programa de c
 - Remover elementos (No inicio, final e elementos específicos);
 - Excluir listas;
 - Reordenar elementos
+
+___
+
+Para executar:
+
+``` 
+
+gcc main.c -o main
+./main
+
+```
