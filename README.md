@@ -14,8 +14,6 @@ ___
 Para executar:
 
 ``` 
-
 gcc main.c -o main
 ./main
-
 ```
