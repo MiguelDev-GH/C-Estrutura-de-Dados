@@ -9,6 +9,10 @@ Um projeto para treinamento de **listas em C** que se resume em um programa de c
 - Excluir listas;
 - Reordenar elementos
 
+No projeto já se vem uma lista pronta (Lista 0) com os elementos:
+**1** -> **3** -> **2** -> **5** -> **4**
+
+
 ___
 
 Para executar:
