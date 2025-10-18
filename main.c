@@ -7,6 +7,9 @@ int main(){
     vetorListas[0] = criarLista();
     inserirInicio(vetorListas[0],1);
     inserirFinal(vetorListas[0],3);
+    inserirFinal(vetorListas[0],2);
+    inserirFinal(vetorListas[0],5);
+    inserirFinal(vetorListas[0],4);
     ListaQntd++;
 
     limpar
@@ -26,9 +29,10 @@ int main(){
             opcao_removerLista();
 
         } else if(atoi(op) == 4){
-            
             menuVerListas();
 
+        } else if(atoi(op) == 5){
+            opcao_ordenar();
         } else if(strcmp(op,"sair") == 0){
             finalizarPrograma();
         

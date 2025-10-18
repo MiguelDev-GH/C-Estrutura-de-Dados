@@ -160,12 +160,6 @@ void removerElementoEspec(Lista* li, int posicao){
     free(aux);
 
     confirmar();
-
-    /*
-    printf("Elemento %d removido com sucesso!",aux->dado);
-    free(aux);
-    confirmar();
-    */
 }
 
 void excluirLista(Lista* li, int numLista){
@@ -188,5 +182,42 @@ void excluirLista(Lista* li, int numLista){
         ListaQntd--;
         free(*li);
 
+    }
+}
+
+void ordernar(Lista* li, int DecrescenteOuCrescente){ // Crescente - 1 / Decrescente - 0 //
+    if(li == NULL) return;
+    if(*li == NULL) return;
+    
+    No* aux = *li;
+    if(aux->prox == NULL) return;
+
+    No* anterior = aux;
+    int temp = 0;
+
+    for(int i = 0; i < tamanhoLista(li);i++){
+
+        aux = *li;
+        anterior = aux;
+
+        while(aux != NULL){
+
+            if(DecrescenteOuCrescente == 1){
+                if(aux->dado < anterior->dado){
+                    temp = aux->dado;
+                    aux->dado = anterior->dado;
+                    anterior->dado = temp;
+                }
+            } else {
+                if(aux->dado > anterior->dado){
+                    temp = aux->dado;
+                    aux->dado = anterior->dado;
+                    anterior->dado = temp;
+                }
+            }
+
+            anterior = aux;
+            aux = aux->prox;
+        }
     }
 }

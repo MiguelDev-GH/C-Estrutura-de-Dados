@@ -7,6 +7,4 @@ Um projeto para treinamento de **listas em C** que se resume em um programa de c
 - Visualizar elementos;
 - Remover elementos (No inicio, final e elementos específicos);
 - Excluir listas;
-
-### Ainda para adicionar: 
-- Reordenar elementos;
+- Reordenar elementos

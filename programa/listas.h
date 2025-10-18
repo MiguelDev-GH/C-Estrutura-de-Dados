@@ -67,6 +67,8 @@ void removerInicio();
 void removerFinal();
 void removerElementoEspec();
 
+void ordernar();
+
 // -------------------------------------- //
 
 #endif

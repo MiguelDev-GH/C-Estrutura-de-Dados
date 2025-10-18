@@ -6,7 +6,8 @@ void menu(){
     printf("1- Criar \n");
     printf("2- Editar\n");
     printf("3- Deletar\n");
-    printf("4- Ver Listas\n\n");
+    printf("4- Ver Listas\n");
+    printf("5- Ordenar lista\n\n");
     printf("SAIR para encerrar o programa\n");
 }
 
@@ -217,4 +218,26 @@ void opcao_removerElemento(){
         return;
     }
 
+}
+
+void opcao_ordenar(){
+    limpar
+    printf("=+----ORDENAR----+=\n\n");
+    printf("1- Crescente\n");
+    printf("2- Decrescente\n\n");
+    lerOp();
+
+    if(atoi(op) == 1 || atoi(op) == 2){
+
+        limpar
+        
+        printf("Qual lista você quer ordenar?\n");
+        scanf("%d",&listaSelecionada);
+
+        if(atoi(op) == 1) ordernar(vetorListas[listaSelecionada],1);
+        else if(atoi(op) == 2) ordernar(vetorListas[listaSelecionada],0);
+
+    } else {
+        opcaoInvalida();
+    }
 }
