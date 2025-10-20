@@ -1,5 +1,4 @@
-# C-Listas
-Um projeto para treinamento de **listas em C** que se resume em um programa de cadastro de dados e manipulação deles.
+# Lista Cadeada Simples
 
 ### Algumas funcionalidades até agora: 
 - Criar listas;
@@ -11,13 +10,3 @@ Um projeto para treinamento de **listas em C** que se resume em um programa de c
 
 No projeto já se vem uma lista pronta (Lista 0) com os elementos:
 **1** -> **3** -> **2** -> **5** -> **4**
-
-
-___
-
-Para executar:
-
-``` 
-gcc main.c -o main
-./main
-```
