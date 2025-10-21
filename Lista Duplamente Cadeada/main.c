@@ -4,8 +4,9 @@ int main(){
 
     Lista* minhaLista = criarLista();
     inserirInicio(minhaLista, 5);
-    inserirInicio(minhaLista, 100);
+    inserirFInal(minhaLista, 10);
     inserirInicio(minhaLista, 1);
+    inserirFInal(minhaLista, 15);
 
     do{
 

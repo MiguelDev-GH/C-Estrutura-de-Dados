@@ -27,6 +27,45 @@ void inserirInicio(Lista* li, int valor){
 
 }
 
+void inserirFInal(Lista* li, int valor){
+    if(li == NULL) return;
+
+    No* novo = malloc(sizeof(No));
+    if(novo == NULL) return;
+
+    No* aux = *li;
+
+    novo->valor = valor;
+    novo->prox = NULL;
+
+    while(aux->prox != NULL){
+        aux = aux->prox;
+    }
+
+    aux->prox = novo;
+    novo->ante = aux;
+
+}
+
+void removerInicio(Lista* li){
+
+    if(li == NULL) return;
+    if(*li == NULL) return;
+
+    No* no_remover = *li;
+
+    *li = no_remover->prox;
+
+    if(no_remover->prox != NULL){
+        No* aux = no_remover->prox;
+
+        aux->ante = *li;
+
+        free(no_remover);
+    }
+
+}
+
 int tamanhoLista(Lista* li){
     if(li == NULL) return 0;
     if(*li == NULL) return 0;
