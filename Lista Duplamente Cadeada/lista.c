@@ -121,8 +121,15 @@ void menuAcoes(int elemValor){
     printf("2- Substituir por outro na lista\n");
     printf("3- Levar para frente ou trás na lista\n");
     printf("4- Remover elemento\n");
+    printf("\nOUTRO - voltar\n");
 
     scanf("%d",&op);
 
-    printf("\nOUTRO - voltar");
+    if(op > 0 && op < 4) operacoes(op,elemValor);
+}
+
+void operacoes( int tipo, int elementoValor){
+    if(tipo == 1){} // Mudar valor
+    else if(tipo == 2){} // Substituir por outro na lista
+    else if(tipo == 3){} // Levar para frente ou trás na lista
 }
