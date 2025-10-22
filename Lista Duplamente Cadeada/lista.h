@@ -38,4 +38,7 @@ int tamanhoLista();
 
 void inserirInicio();
 
+void menuAcoes();
+void operacoes();
+
 #endif

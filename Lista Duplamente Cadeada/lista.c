@@ -76,7 +76,7 @@ int tamanhoLista(Lista* li){
     return cont;
 }
 
-int funcSelecionado(Lista* li){
+No* funcSelecionado(Lista* li){
     if(li == NULL) return 0;
     if(*li == NULL) return 0;
 
@@ -86,7 +86,7 @@ int funcSelecionado(Lista* li){
         aux = aux->prox;
 
 
-    return aux->valor;
+    return aux;
     
 }
 
@@ -114,7 +114,21 @@ void imprimirLista(Lista* li){
     }
 }
 
-void menuAcoes(int elemValor){
+void removerEspec(No* no){
+
+    No* no_anterior = no->ante;
+    No* no_prox = no->prox;
+
+    no_anterior->prox = no_prox;
+    no_prox->ante = no_anterior; 
+
+    free(no);
+}
+
+void menuAcoes(No* no){
+
+    int elemValor = no->valor;
+
     limpar
     printf("Selecionado: >%d<\n\n",elemValor);
     printf("1- Mudar valor\n");
@@ -125,11 +139,21 @@ void menuAcoes(int elemValor){
 
     scanf("%d",&op);
 
-    if(op > 0 && op < 4) operacoes(op,elemValor);
+    if(op > 0 && op < 4) operacoes(op,no);
+    else if(op == 4) removerEspec(no);
+    else return;
 }
-
-void operacoes( int tipo, int elementoValor){
-    if(tipo == 1){} // Mudar valor
-    else if(tipo == 2){} // Substituir por outro na lista
-    else if(tipo == 3){} // Levar para frente ou trás na lista
+ 
+void operacoes(int tipo, No* elem){
+    if(tipo == 1){  // Mudar valor
+        limpar
+        printf("Digite o novo valor: ");
+        scanf("%d",&elem->valor);
+    }
+    else if(tipo == 2){ // Substituir por outro na lista
+        limpar
+    } 
+    else if(tipo == 3){ // Levar para frente ou trás na lista
+        limpar
+    } 
 }
