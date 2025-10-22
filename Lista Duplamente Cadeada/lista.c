@@ -58,7 +58,7 @@ void removerInicio(Lista* li){
     if(no_remover->prox != NULL){
         No* aux = no_remover->prox;
 
-        aux->ante = *li;
+        aux->ante = NULL;
 
         free(no_remover);
     }
@@ -146,7 +146,9 @@ void menuAcoes(Lista* li, No* no){
     limpar_buffer();
 
     if(op > 0 && op < 4) operacoes(op,no);
-    else if(op == 4) removerEspec(li,no);
+    else if(op == 4) {
+        removerEspec(li,no);
+    }
     else return;
 }
  

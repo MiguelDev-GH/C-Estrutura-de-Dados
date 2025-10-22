@@ -10,6 +10,8 @@ int main(){
 
     do{
 
+        op = 0;
+
         if(elemSelecionado < 1) elemSelecionado = 1;
         if(elemSelecionado > tamanhoLista(minhaLista)) elemSelecionado = tamanhoLista(minhaLista);
 
@@ -30,9 +32,9 @@ int main(){
         limpar_buffer();
 
         if(op == 1) elemSelecionado++;
-        if(op == 2) elemSelecionado--;
-        if(op == 3) menuAcoes(minhaLista,funcSelecionado(minhaLista));
-        if(op == 4) rodando = 0;
+        else if(op == 2) elemSelecionado--;
+        else if(op == 3) menuAcoes(minhaLista,funcSelecionado(minhaLista));
+        else if(op == 4) rodando = 0;
 
     } while(rodando == 1);
 
