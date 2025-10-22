@@ -15,7 +15,7 @@ int main(){
 
         limpar
 
-        funcSelecionado(minhaLista, elemSelecionado);
+        printf("Lista: ");
         imprimirLista(minhaLista);
         printf("\n");
         printf("1- Avançar\n");
@@ -30,7 +30,7 @@ int main(){
 
         if(op == 1) elemSelecionado++;
         if(op == 2) elemSelecionado--;
-        if(op == 3) menuAcoes();
+        if(op == 3) menuAcoes(funcSelecionado(minhaLista));
         if(op == 4) rodando = 0;
 
     } while(rodando == 1);

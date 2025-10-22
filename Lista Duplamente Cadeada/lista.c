@@ -76,7 +76,7 @@ int tamanhoLista(Lista* li){
     return cont;
 }
 
-int funcSelecionado(Lista* li, int elemSelecionado){
+int funcSelecionado(Lista* li){
     if(li == NULL) return 0;
     if(*li == NULL) return 0;
 
@@ -93,11 +93,10 @@ int funcSelecionado(Lista* li, int elemSelecionado){
 void imprimirLista(Lista* li){
     if(li == NULL) return;
     if(*li == NULL){
-        printf("\nLista vazia\n");
+        printf("\nVAZIA\n");
     }else{
 
         No* aux = *li;
-        printf("\nLista: ");
 
         for(int i = 0; i < tamanhoLista(li);i++){
             if(elemSelecionado-1 == i)
@@ -115,6 +114,15 @@ void imprimirLista(Lista* li){
     }
 }
 
-void menuAcoes(){
-    printf("");
+void menuAcoes(int elemValor){
+    limpar
+    printf("Selecionado: >%d<\n\n",elemValor);
+    printf("1- Mudar valor\n");
+    printf("2- Substituir por outro na lista\n");
+    printf("3- Levar para frente ou trás na lista\n");
+    printf("4- Remover elemento\n");
+
+    scanf("%d",&op);
+
+    printf("\nOUTRO - voltar");
 }
