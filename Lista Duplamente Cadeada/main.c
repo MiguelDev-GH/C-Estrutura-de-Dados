@@ -15,18 +15,23 @@ int main(){
 
         limpar
 
+        funcSelecionado(minhaLista, elemSelecionado);
         imprimirLista(minhaLista);
-        printf("Selecionado: %d\n\n",funcSelecionado(minhaLista,elemSelecionado));
+        printf("\n");
         printf("1- Avançar\n");
-        printf("2- Recuar\n");
-        printf("\n3- Sair");
+        printf("2- Recuar\n\n");
+
+        printf("3- Ações...\n");
+
+        printf("\n4- Sair");
         printf("\n\n");
 
         scanf("%d",&op);
 
         if(op == 1) elemSelecionado++;
         if(op == 2) elemSelecionado--;
-        if(op == 3) rodando = 0;
+        if(op == 3) menuAcoes();
+        if(op == 4) rodando = 0;
 
     } while(rodando == 1);
 

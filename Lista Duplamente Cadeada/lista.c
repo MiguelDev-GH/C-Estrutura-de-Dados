@@ -1,11 +1,5 @@
 #include "lista.h"
 
-int countDigits(int number){
-    if(abs(number) < 10)
-        return 1;
-    return 1 + countDigits(number/10);
-}
-
 Lista* criarLista(){
     Lista* li = malloc(sizeof(Lista));
     if(li == NULL) printf("Erro ao criar a lista");
@@ -88,9 +82,9 @@ int funcSelecionado(Lista* li, int elemSelecionado){
 
     No* aux = *li;
 
-    for(int i = 1; i < elemSelecionado; i++){
+    for(int i = 1; i < elemSelecionado; i++)
         aux = aux->prox;
-    }
+
 
     return aux->valor;
     
@@ -106,20 +100,21 @@ void imprimirLista(Lista* li){
         printf("\nLista: ");
 
         for(int i = 0; i < tamanhoLista(li);i++){
-            printf("%d ",aux->valor);
+            if(elemSelecionado-1 == i)
+                printf(">");
+            printf("%d",aux->valor);
+            if(elemSelecionado-1 == i)
+                printf("<");
+
+            printf(" ");
             aux = aux->prox;
         }
-        printf("\n       ");
 
-        aux = *li;
-        for (int i = 1; i < elemSelecionado; i++){
-            for(int J = 1; J <= countDigits(aux->valor) + 1;J++){
-                printf(" ");
-            }
-            aux = aux->prox;
-        }
-        printf("^\n");
-
+        printf("\n");
 
     }
+}
+
+void menuAcoes(){
+    printf("");
 }
