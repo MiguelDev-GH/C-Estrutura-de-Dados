@@ -35,8 +35,15 @@ int op;
 Lista* criarLista();
 
 int tamanhoLista();
+void imprimirLista();
 
 void inserirInicio();
+void inserirFInal();
+void removerInicio();
+
+void removerEspec();
+
+No* funcSelecionado();
 
 void menuAcoes();
 void operacoes();

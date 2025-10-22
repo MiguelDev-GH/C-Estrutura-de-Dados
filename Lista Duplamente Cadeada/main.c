@@ -27,10 +27,11 @@ int main(){
         printf("\n\n");
 
         scanf("%d",&op);
+        limpar_buffer();
 
         if(op == 1) elemSelecionado++;
         if(op == 2) elemSelecionado--;
-        if(op == 3) menuAcoes(funcSelecionado(minhaLista));
+        if(op == 3) menuAcoes(minhaLista,funcSelecionado(minhaLista));
         if(op == 4) rodando = 0;
 
     } while(rodando == 1);

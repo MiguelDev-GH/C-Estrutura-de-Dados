@@ -1,5 +1,10 @@
 #include "lista.h"
 
+void limpar_buffer(){
+    int c;
+    while ((c = getchar()) != '\n' && c != EOF);
+}
+
 Lista* criarLista(){
     Lista* li = malloc(sizeof(Lista));
     if(li == NULL) printf("Erro ao criar a lista");
@@ -114,18 +119,18 @@ void imprimirLista(Lista* li){
     }
 }
 
-void removerEspec(No* no){
+void removerEspec(Lista* li, No* no){
+    if(no == NULL) return;
 
-    No* no_anterior = no->ante;
-    No* no_prox = no->prox;
+    if(no->ante == NULL) *li = no->prox;
+    else no->ante->prox = no->prox;
 
-    no_anterior->prox = no_prox;
-    no_prox->ante = no_anterior; 
+    if(no->prox != NULL) no->prox->ante = no->ante;
 
     free(no);
 }
 
-void menuAcoes(No* no){
+void menuAcoes(Lista* li, No* no){
 
     int elemValor = no->valor;
 
@@ -138,9 +143,10 @@ void menuAcoes(No* no){
     printf("\nOUTRO - voltar\n");
 
     scanf("%d",&op);
+    limpar_buffer();
 
     if(op > 0 && op < 4) operacoes(op,no);
-    else if(op == 4) removerEspec(no);
+    else if(op == 4) removerEspec(li,no);
     else return;
 }
  
