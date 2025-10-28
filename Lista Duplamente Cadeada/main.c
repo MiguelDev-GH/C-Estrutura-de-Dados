@@ -8,6 +8,8 @@ int main(){
     inserirInicio(minhaLista, 1);
     inserirFInal(minhaLista, 15);
 
+    trocarElem(minhaLista,5,15);
+
     do{
 
         op = 0;
