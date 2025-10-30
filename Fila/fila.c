@@ -24,7 +24,21 @@ void Enfileirar(Fila* fi, int valor){
         return;
     }
 
-    novo->prox = fi->fim;
+    fi->fim->prox = novo;
     fi->fim = novo;
 
+}
+
+void imprimirFila(Fila* fi){
+    if(fi == NULL) return;
+
+    int cont = 0;
+
+    No* aux = fi->inicio;
+    while(aux->prox != NULL){
+
+        printf("%d- %d\n",cont,aux->valor);
+        cont++;
+        aux = aux->prox;
+    }
 }

@@ -6,16 +6,18 @@
 
 typedef struct No{
     int valor;
-    No* prox;
+    struct No* prox;
 } No;
 
 typedef struct Fila{
-    No* inicio;
-    No* fim;
+    struct No* inicio;
+    struct No* fim;
 } Fila;
 
 Fila* criarFila();
 
 void Enfileirar(Fila* fi, int valor);
+
+void imprimirFila(Fila* fi);
 
 #endif
