@@ -130,44 +130,59 @@ void removerEspec(Lista* li, No* no){
     free(no);
 }
 
-void trocarElem(Lista* li, int valor1, int valor2){
-    if(li == NULL) return;
-    if(*li == NULL) return;
+void trocarElementoPosterior(Lista* li, int valor){
 
-    No* aux1 = *li;
-    No* aux2 = *li;
-    No* auxAUX = *li;
+    if(li == NULL || *li == NULL || (*li)->prox == NULL) return;
 
-    while(aux1->prox != NULL){
+    No* aux = *li;
 
-        if(aux1->valor == valor1){
-            while(aux2->prox != NULL){
-                if(aux2->valor == valor2){
+    int encontrado = 0;
 
-                    auxAUX = aux1;
-
-                    aux1->prox->ante = aux2;
-                    aux1->ante->prox = aux2;
-
-                    aux2->prox->ante = aux1;
-                    aux2->ante->prox = aux1;
-
-                    aux1->prox = aux2->prox;
-                    aux1->ante = aux2->ante;
-                    aux2->prox = auxAUX->prox;
-                    aux2->ante = auxAUX->ante;
-
-                    break;
-
-                }
-
-                aux2 = aux2->prox;
-            }
-        }
-
-        aux1 = aux1->prox;
+    while(aux->valor != valor){
+        if(aux->prox == NULL && aux->valor != valor) printf("Valor não encontrado");
+        aux = aux->prox;
     }
 
+    if(aux->prox == NULL){
+
+        (*li)->prox->ante = aux;
+        aux->ante->prox = *li;
+
+        aux->prox = (*li)->prox;
+        (*li)->prox = NULL;
+        (*li)->ante = aux->ante;
+        aux->ante = NULL;
+        *li=aux;
+
+        encontrado = 1;
+        return;
+
+    } else {
+
+        No* proxT = aux->prox;
+
+        if(proxT->prox == NULL){
+            aux->prox = NULL;
+        } else {
+            proxT->prox->ante = aux;
+            proxT->ante = aux->ante;
+        }
+
+        if(aux->ante == NULL){
+            *li = proxT;
+            proxT->ante = NULL;
+        } else {
+            aux->ante->prox = proxT;
+            proxT->ante = aux->ante;
+        }
+
+        aux->prox = proxT->prox;
+        proxT->prox = aux;
+        aux->ante = proxT;
+
+        encontrado = 1;
+        return;
+    }
 }
 
 void menuAcoes(Lista* li, No* no){

@@ -48,4 +48,6 @@ No* funcSelecionado();
 void menuAcoes();
 void operacoes();
 
+void trocarElementoPosterior();
+
 #endif

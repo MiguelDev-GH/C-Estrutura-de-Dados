@@ -1,5 +1,7 @@
 #include "lista.c"
 
+//Projeto incompleto
+
 int main(){
 
     Lista* minhaLista = criarLista();
@@ -8,7 +10,7 @@ int main(){
     inserirInicio(minhaLista, 1);
     inserirFInal(minhaLista, 15);
 
-    trocarElem(minhaLista,5,15);
+    trocarElementoPosterior(minhaLista,5);
 
     do{
 
