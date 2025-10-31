@@ -9,6 +9,8 @@ int main(){
     Enfileirar(minhaFila,3);
     Enfileirar(minhaFila,4);
 
+    desenfileirar(minhaFila);
+
     imprimirFila(minhaFila);
 
     return 0;

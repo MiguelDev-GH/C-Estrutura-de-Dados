@@ -29,13 +29,24 @@ void Enfileirar(Fila* fi, int valor){
 
 }
 
+void desenfileirar(Fila* fi){
+    if(fi == NULL || fi->inicio == NULL) return;
+    
+    No* aux = fi->inicio;
+
+    fi->inicio = aux->prox;
+    
+    free(aux);
+
+}
+
 void imprimirFila(Fila* fi){
     if(fi == NULL) return;
 
     int cont = 0;
 
     No* aux = fi->inicio;
-    while(aux->prox != NULL){
+    while(aux != NULL){
 
         printf("%d- %d\n",cont,aux->valor);
         cont++;
