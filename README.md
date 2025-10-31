@@ -1,15 +1,17 @@
-# Listas em C
+# Estrutura de Dados
 
-Um projeto para meu treinamente em **listas** de todos os tipos, em **C**.
+Repositório para que eu consiga praticar a aplicar o aprendizado da matéria de **Estrutura de Dados**
 
 Por enquanto, apenas contém:
 
-- Listas Simples *(Cadeadas padrão)*
+- Listas Simples *(Cadeadas padrão, completo)*
   
 - Listas Duplamente Cadeada *(Ainda em construção)*
+
+- Fila *(Completo)*
 ___
 
-Para executar ou testar um programa da lista;
+Para executar ou testar um programa;
 
 - Execute o repositório (Copie os arquivos em algum lugar)
 - No terminal do local onde está o repositório, entre na pasta que deseje, exemplo:
